@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Eco_Ease.LoginView"
+             Title="LoginView">
+    
+    <Grid RowDefinitions=".3*,.7*">
+        <Image Aspect="AspectFill"  Source="eco2.png"/>
+        <Grid BackgroundColor="White" Opacity=".4"/>
+        <Grid ColumnDefinitions="*,*" >
+            <Image Aspect="AspectFit"
+             HeightRequest="100"
+             Source="icon.png.png"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <RoundRectangle Margin="-5,-30,-2,-5"
+                            CornerRadius="30,30,0,0"
+                            Fill="White"/>
+            <VerticalStackLayout Margin="30,0,30,0">
+                <Label FontAttributes="Bold"
+                       FontFamily="Bold"
+                       FontSize="Header"
+                       HorizontalTextAlignment="Center"
+                       Text="Eco-Ease"
+                       TextColor="LimeGreen"/>
+                <Label FontFamily="AnybodyRegular"
+                       HorizontalTextAlignment="Center"
+                       Text="Login to get started"
+                       TextColor="Gray"/>
+                <Grid Margin="0,20,0,20" ColumnDefinitions=".2*,.8*" >
+                    <RoundRectangle
+                        BackgroundColor="LimeGreen"
+                        CornerRadius="10"
+                        HeightRequest="60"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        WidthRequest="60"/>
+                    <Image HorizontalOptions="Center"
+                           Aspect="AspectFit"
+                           HeightRequest="44"
+                           Source="user2.png"/>
+                    <Entry
+                        Grid.Column="1"
+                        Placeholder="Username"
+                        VerticalOptions="Center"/>
+                </Grid>
+                <Grid Margin="0,20,0,20" ColumnDefinitions=".2*,.8*" >
+                    <RoundRectangle
+                      BackgroundColor="LimeGreen"
+                      CornerRadius="10"
+                      HeightRequest="60"
+                      HorizontalOptions="Center"
+                      VerticalOptions="Center"
+                      WidthRequest="60"/>
+                    <Image HorizontalOptions="Center"
+                       Aspect="AspectFit"
+                       HeightRequest="44"
+                       Source="password.png"/>
+                    <Entry
+                        Grid.Column="1"
+                        Placeholder="Password"
+                        IsPassword="True"
+                        VerticalOptions="Start"/>
+                </Grid>
+                <Button
+                    Margin="0,20,0,0"
+                    BackgroundColor="LimeGreen"
+                    HeightRequest="40"
+                    Text="Login"/>
+                <Label Margin="0,20,0,0"
+                       HorizontalOptions="Center"
+                       Text="Forgot password"
+                       TextColor="Grey"
+                       TextDecorations="Underline"/>
+                <Button Margin="0,30,0,0"
+                        BackgroundColor="White"
+                        BorderWidth="2"
+                        BorderColor="LimeGreen"
+                        HeightRequest="40"
+                        Text="Create new account"
+                        TextColor="Black"/>
+            </VerticalStackLayout>
+        </Grid>
+    </Grid>
+</ContentPage>
